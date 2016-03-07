@@ -6,8 +6,8 @@ var OUTFILE = "capture.png";
 
 // set phantomjs viewport size
 page.viewportSize = {
-  width: 1600,
-  height: 400
+  width: 1920,
+  height: 1024
 }
 
 page.onLoadFinished = function(status){
@@ -29,8 +29,8 @@ page.onLoadFinished = function(status){
         return height;
       });
   
-      page.clipRect = {top: 0, left: 0, width: width, heigth: realHeight};
-      console.log('Cropping to: '+width+'x'+realHeight);
+      //page.clipRect = {top: 0, left: 0, width: width, heigth: realHeight};
+      //console.log('Cropping to: '+width+'x'+realHeight);
       
       page.render('capture.png');
       console.log('Wrote captured image to '+OUTFILE);
